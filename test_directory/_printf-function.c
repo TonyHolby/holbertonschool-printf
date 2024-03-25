@@ -8,7 +8,10 @@
 
 void print_char(va_list list)
 {
-	_putchar(va_arg(list, int));
+	char c;
+
+	c = va_arg(list, int)
+	_putchar(c);
 	_putchar('\n');
 }
 
@@ -47,8 +50,13 @@ void print_string(va_list list)
 
 void print_percentage(va_list list)
 {
-        _putchar(va_arg(list, int));
-        _putchar('\n');
+	char *str = "%";
+
+	if (va_arg(list, int) == *str)
+	{
+		_putchar (*str);
+	}
+        _putchar(*str);
 }
 
 /**

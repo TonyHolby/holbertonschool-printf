@@ -8,7 +8,7 @@
 typedef struct spe_t;
 
 {
-	char *spe;
+	char spe;
 	int (*f)(va_list list);
 } spe_t;
 

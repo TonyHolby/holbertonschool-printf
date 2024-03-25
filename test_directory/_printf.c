@@ -3,9 +3,20 @@
 /**
  * _printf - print all 
  *
- * @format: ..
+ * @format: is a character string.
  *
- * Return: ..
+ * return: ..
  */
 
 int _printf(const char *format, ...)
+{
+va_list list;
+
+sp_t sps[] = {
+	{"c", print_char},
+	{"s", print_string},
+	{"%", print_percentage},
+	{"d", print_decimal},
+	{"i", print_integer},
+	{NULL, NULL}
+},

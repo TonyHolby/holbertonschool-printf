@@ -18,5 +18,8 @@ spe_t sps[] = {
 	{"%", print_percentage},
 	{"d", print_decimal},
 	{"i", print_integer},
-	{NULL, NULL}
-},
+	{'\0', NULL}
+};
+
+print_string("Hello, test")
+}

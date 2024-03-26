@@ -14,6 +14,7 @@ typedef struct spe_t;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int _strlen(char *s);
 void print_char(va_list list);
 void print_string(va_list list);
 void print_percentage(va_list list);

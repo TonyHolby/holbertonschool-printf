@@ -19,18 +19,25 @@ int _printf(const char *format, ...)
         j = 0;
         while (format != NULL && format[j] != '\0')
         {
-                i = 0;
-                while (sps[i].spe != '\0')
+                if (format[j] == '%')
                 {
-                        if (sps[i].spe == format[j])
+                        j++;
+                        i = 0;
+                        while (sps[i].spe != '\0')
                         {
-                                sps[i].f(list);
+                                if (sps[i].spe == format[j])
+                                {
+                                        sps[i].f(list);
+                                }
+                                i++;
                         }
-                        i++;
+                }
+                else 
+                {
+                        _putchar(format[j]);
                 }
                 j++;
         }
         va_end(list);
-        _putchar('\n');
         return (0);
 }

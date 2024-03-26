@@ -9,15 +9,17 @@ int print_string(va_list list)
 	
         int j;
         char *string = va_arg(list, char *);
+
         if (string == NULL)
         {
                 _putchar('n');
+		return (0);
         }
         for (j = 0; string[j] != '\0'; j++)
         {
                 _putchar(string[j]);
         }
-	return (0);
+	return (_strlen(string));
 	 
 
 	/**
@@ -42,8 +44,9 @@ int print_string(va_list list)
 int print_char(va_list list)
 {
         char c = va_arg(list, int);
-        return(c);
-	
+
+	_putchar(c);
+        return (0);
 }
 /**
  * print_percentage - a function that prints the percentage sign.
@@ -52,11 +55,13 @@ int print_char(va_list list)
  */
 int print_percentage(va_list list)
 {
-	char *str = "%";
+	char str = '%';
 
-	if (va_arg(list, int) == *str)
+	if (va_arg(list, int) == str)
 	{
-		return (*str);
+		_putchar(str);
+
+		return (0);
 	}
-	return (*str);
+	return (0);
 }

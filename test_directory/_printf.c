@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 {
 va_list list;
 
-sp_t sps[] = {
+spe_t sps[] = {
 	{"c", print_char},
 	{"s", print_string},
 	{"%", print_percentage},

@@ -24,26 +24,26 @@ OPTION.
 EXEMPLE.
 
 char letter = 'A';
-printf("%c"\n, letter);
+_printf("%c"\n, letter);
 
 Letter is a argument of %c, %c display A.
 
 Char *hello = "hello world"
-printf("%s\n", hello);
+_printf("%s\n", hello);
 
 Hello is a argument of %s, %s display hello world.
 
 int n = 42;
-printf("%d\n", n);
+_printf("%d\n", n);
 
 n is a argument of %d, %d display 42.
 
 int n = 42;
 int n2 = 052; /number octal (42)/
 int n3 = 0x2A; /number hexadecimal (42)/
-printf("%d\n", n);
-printf("%d\n", n2);
-printf("%d\n", n3);
+_printf("%d\n", n);
+_printf("%d\n", n2);
+_printf("%d\n", n3);
 
 n, n2, n3, is a argument of %d,%d will convert all its integers and therefore display 42.
 

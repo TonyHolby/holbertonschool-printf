@@ -1,0 +1,47 @@
+NAME.
+
+_printf
+
+SYNOPSIS.
+
+#include <stdio.h>
+int printf(const char *restrict format, ...);
+
+DESCRIPTION.
+
+The printf function is a formatted output function used to display text on the console or other output devices.
+
+OPTION.
+
+%c : Displays a character supplied as an argument.
+
+char letter = 'A';
+printf("%c"\n, letter); 
+
+Letter is a argument of %c, %c display A.
+
+
+%s : Displays a character string supplied as an argument .
+
+Char *hello = "hello world"
+printf("%s\n", hello);
+
+Hello is a argument of %s, %s display hello world.
+
+%d : Displays decimal integers given as an argument.
+
+int n = 42;
+printf("%d\n", n);
+
+n is a argument of %d, %d display 42.
+
+%i : Displays decimal, octal and hexadecimal integers.
+
+int n = 42;
+int n2 = 052; /number octal (42)/
+int n3 = 0x2A; /number hexadecimal (42)/
+printf("%d\n", n);
+printf("%d\n", n2);
+printf("%d\n", n3);
+
+n, n2, n3, is a argument of %d,%d will convert all its integers and therefore display 42.

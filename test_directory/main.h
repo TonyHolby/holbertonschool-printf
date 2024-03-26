@@ -1,17 +1,13 @@
-#ifndef MAIN
-#define MAIN
-
+#ifndef MAIN_H
+#define MAIN_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
-typedef struct spe_t;
-
+typedef struct spe
 {
-	char spe;
-	int (*f)(va_list list);
+        char spe;
+        void (*f)(va_list list);
 } spe_t;
-
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _strlen(char *s);

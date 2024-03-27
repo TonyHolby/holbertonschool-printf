@@ -16,7 +16,6 @@ int _printf(const char *format, ...)
                 {'s', print_string},
                 {'%', print_percentage},
 		{'d', print_decimal},
-		{'i', print_integer},
 		{'\0', NULL}};
 	va_start(list, format);
 	j = 0;

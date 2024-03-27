@@ -58,3 +58,27 @@ int print_percentage(va_list list __attribute__((unused)))
 	_putchar('%');
 	return (0);
 }
+/**
+ * print_decimal - a function that prints a decimal
+ */
+int print_decimal(va_list list)
+{
+	int count = 1, m = 0;
+	unsigned int n = 0;
+
+	n = va_arg(list, int);
+	m = n;
+	if (m < 0)
+	{
+		_putchar('-');
+		m = m * -1;
+		n = m;
+		count += 1;
+	}
+	for (; n > 9; n /= 10)
+	{
+		count++;
+	}
+
+	return (count);
+}

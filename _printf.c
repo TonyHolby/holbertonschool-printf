@@ -11,7 +11,7 @@
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int i, j, num_of_char = 0;
+	int i, j, len = 0;
 	spe_t sps[] = {
 		{'c', print_char},
 		{'s', print_string},
@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 	}
 	while (format != NULL && format[j] != '\0')
 	{
-		if (format[j] == '%' && (format[j] != 'K' || format[j] != '!'))
+		if (format[j] == '%' && (format[j + 1] != 'K' && format[j + 1] != '!'))
 		{
 			j++;
 			i = 0;
@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 			{
 				if (sps[i].spe == format[j])
 				{
-					num_of_char += sps[i].f(list);
+					len += sps[i].f(list);
 				}
 				i++;
 			}
@@ -42,10 +42,10 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[j]);
-			num_of_char++;
+			len++;
 		}
 		j++;
 	}
 	va_end(list);
-	return (num_of_char);
+	return (len);
 }

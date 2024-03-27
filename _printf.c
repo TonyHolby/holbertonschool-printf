@@ -6,6 +6,7 @@
  *
  * return: always 0.
  */
+
 int _printf(const char *format, ...)
 {
         va_list list;

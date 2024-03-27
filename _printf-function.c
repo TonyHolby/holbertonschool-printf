@@ -1,28 +1,12 @@
 #include "main.h"
+
 /**
  * print_string - a function that prints a string.
- * Description: a function that prints a string.
- *
+ * @list: a list
+ * Return: the number of characters printed
  */
 int print_string(va_list list)
 {
-	/**
-        int j;
-        char *string = va_arg(list, char *);
-
-        if (string == NULL)
-        {
-                _putchar('n');
-		return (0);
-        }
-        for (j = 0; string[j] != '\0'; j++)
-        {
-                _putchar(string[j]);
-        }
-	return (_strlen(string));
-	*/ 
-
-	
 	char *str;
 	int len, i;
 
@@ -33,33 +17,40 @@ int print_string(va_list list)
 	{
 		_putchar (str[i]);
 	}
-	return (0);
-	
+	return (len);
 }
+
 /**
  * print_char - a function that prints a character.
- * Description: a function that prints a character.
- *
+ * @list: a list
+ * Return: the number of characters printed
  */
 int print_char(va_list list)
 {
-        char c = va_arg(list, int);
+	int len = 1;
+	char c = va_arg(list, int);
 
 	_putchar(c);
-        return (0);
+	return (len);
 }
+
 /**
- * print_percentage - a function that prints the percentage sign.
- * Description:
- *
+ * print_percentage - a function that prints the percentage symbol.
+ * @list: a list
+ * Return: the number of characters printed
  */
 int print_percentage(va_list list __attribute__((unused)))
 {
+	int len = 1;
+
 	_putchar('%');
-	return (0);
+	return (len);
 }
+
 /**
  * print_decimal - a function that prints a decimal
+ * @list: a list
+ * Return: the number of characters printed
  */
 int print_decimal(va_list list)
 {

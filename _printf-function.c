@@ -6,7 +6,7 @@
  */
 int print_string(va_list list)
 {
-	
+	/**
         int j;
         char *string = va_arg(list, char *);
 
@@ -20,9 +20,9 @@ int print_string(va_list list)
                 _putchar(string[j]);
         }
 	return (_strlen(string));
-	 
+	*/ 
 
-	/**
+	
 	char *str;
 	int len, i;
 
@@ -34,7 +34,7 @@ int print_string(va_list list)
 		_putchar (str[i]);
 	}
 	return (0);
-	*/
+	
 }
 /**
  * print_char - a function that prints a character.

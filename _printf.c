@@ -14,30 +14,32 @@ int _printf(const char *format, ...)
                 {'c', print_char},
                 {'s', print_string},
                 {'%', print_percentage},
-                {'\0', NULL}};
-        va_start(list, format);
-        j = 0;
-        while (format != NULL && format[j] != '\0')
-        {
-                if (format[j] == '%')
-                {
-                        j++;
-                        i = 0;
-                        while (sps[i].spe != '\0')
-                        {
-                                if (sps[i].spe == format[j])
-                                {
-                                        sps[i].f(list);
-                                }
-                                i++;
-                        }
-                }
-                else 
-                {
-                        _putchar(format[j]);
-                }
-                j++;
-        }
-        va_end(list);
-        return (0);
+		{'d', print_decimal},
+		{'i', print_integer},
+		{'\0', NULL}};
+	va_start(list, format);
+	j = 0;
+	while (format != NULL && format[j] != '\0')
+	{
+		if (format[j] == '%')
+		{
+			j++;
+			i = 0;
+			while (sps[i].spe != '\0')
+			{
+				if (sps[i].spe == format[j])
+				{
+					sps[i].f(list);
+				}
+				i++;
+			}
+		}
+		else 
+		{
+			_putchar(format[j]);
+		}
+		j++;
+	}
+	va_end(list);
+	return (0);
 }

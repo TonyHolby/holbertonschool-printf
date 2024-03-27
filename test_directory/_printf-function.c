@@ -53,15 +53,8 @@ int print_char(va_list list)
  * Description:
  *
  */
-int print_percentage(va_list list)
+int print_percentage(va_list list __attribute__((unused)))
 {
-	char str = '%';
-
-	if (va_arg(list, int) == str)
-	{
-		_putchar(str);
-
-		return (0);
-	}
+	_putchar('%');
 	return (0);
 }

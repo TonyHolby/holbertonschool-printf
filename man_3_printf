@@ -1,4 +1,4 @@
-TH PRINTF "27 Mars 2024" "1.0" "printf man page"
+TH _PRINTF "27 Mars 2024" "1.0" "printf man page"
 
 .SH NAME
 _printf
@@ -6,11 +6,11 @@ _printf
 .SH SYNOPSIS
 
 #include <stdio.h>
-int printf(const char *restrict format, ...);
+int _printf(const char *restrict format, ...);
 
 .SH DESCRIPTION
 
-The printf function is a formatted output function used to display text on the console or other output devices.
+The _printf function is a formatted output function used to display text on the console or other output devices.
 
 .SH OPTION
 

@@ -11,7 +11,7 @@ int print_string(va_list list)
 	int len, i;
 
 	str = va_arg(list, char *);
-	len = 0;
+	len = _strlen(str);
 
 	if (str == NULL)
 	{
@@ -21,6 +21,7 @@ int print_string(va_list list)
 		_putchar('l');
 		_putchar('l');
 		_putchar(')');
+		len = 6;
 
 		return (len);
 	}
@@ -29,7 +30,7 @@ int print_string(va_list list)
 	{
 		_putchar (str[i]);
 	}
-	len = _strlen(str);
+
 	return (len);
 }
 

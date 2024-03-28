@@ -1,22 +1,30 @@
-> Project C - printf
+> # Project C - printf
 
-> Description of the project
+
+
+> # Description of the project
 
 This project is an implementation of the printf function.
 
-> Command of compilation
+
+> # Command of compilation
 
 The command to compil the program :
-./_printf
 
-> Requirements
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
+
+
+> # Requirements
 
 To compil this program it is necessary to use Ubuntu 20.04, the GCC compiler and git.
 
-> Examples of use of the printf function
+
+> # Examples of use of the printf function
 
 Here is some examples of the use of the printf function :
+
 To print a string :
+```
 #include "main.h"
 
 int main(void)
@@ -25,8 +33,10 @@ int main(void)
 	_printf("%s", sentence);
 	return (0);
 }
+```
 
 To print a character :
+```
 #include "main.h"
 
 int main(void)
@@ -35,59 +45,9 @@ int main(void)
         _printf("%c", c);
         return (0);
 }
+```
 
-> Man page
-
-NAME.
-
-_printf
-
-SYNOPSIS.
-
-#include <stdio.h>
-int printf(const char *restrict format, ...);
-
-DESCRIPTION.
-
-The printf function is a formatted output function used to display text on the console or other output devices.
-
-OPTION.
-
-%c : Displays a character supplied as an argument.
-
-char letter = 'A';
-printf("%c"\n, letter); 
-
-Letter is a argument of %c, %c display A.
-
-
-%s : Displays a character string supplied as an argument .
-
-Char *hello = "hello world"
-printf("%s\n", hello);
-
-
-Hello is a argument of %s, %s display hello world.
-
-%d : Displays decimal integers given as an argument.
-
-int n = 42;
-printf("%d\n", n);
-
-n is a argument of %d, %d display 42.
-
-%i : Displays decimal, octal and hexadecimal integers.
-
-int n = 42;
-int n2 = 052; /number octal (42)/
-int n3 = 0x2A; /number hexadecimal (42)/
-printf("%d\n", n);
-printf("%d\n", n2);
-printf("%d\n", n3);
-
-n, n2, n3, is a argument of %d,%d will convert all its integers and therefore display 42.
-
-> Testing
+> # Testing
 
 Explanation of the code :
 Step 0:
@@ -99,8 +59,10 @@ Once the call to the corresponding function is trigerred, the argument is passed
 Valgrind step :
 Valgrind is a tool suite that provides a number of debugging and profiling tools that help to confirm if the allocation of memory creates memory leaks.
 
-> Flowchart
+> # Flowchart
 
 ![flowchart](https://github.com/TonyHolby/holbertonschool-printf/assets/158024260/bdf9e87b-d0e6-4c1b-973d-82d375a6e4a2)
+
+> # Authors
 
 

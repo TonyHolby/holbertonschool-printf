@@ -11,16 +11,16 @@ int print_string(va_list list)
 	int len, i;
 
 	str = va_arg(list, char *);
-	len = _strlen(str);
+	len = 0;
 
 	if (str == NULL)
 	{
-		_putchar('(');
-		_putchar('n');
-		_putchar('u');
-		_putchar('l');
-		_putchar('l');
-		_putchar(')');
+		len += _putchar('(');
+		len += _putchar('n');
+		len += _putchar('u');
+		len += _putchar('l');
+		len += _putchar('l');
+		len += _putchar(')');
 
 		return (len);
 	}
@@ -29,6 +29,7 @@ int print_string(va_list list)
 	{
 		_putchar (str[i]);
 	}
+	len = _strlen(str);
 	return (len);
 }
 
@@ -82,6 +83,7 @@ int print_decimal(va_list list)
 	for (; n > 9; n /= 10)
 	{
 		len++;
+		_putchar(n);
 	}
 	_putchar(len);
 
@@ -89,6 +91,7 @@ int print_decimal(va_list list)
 	{
 		len++;
 	}
+	_putchar(len);
 
 	return (len);
 }

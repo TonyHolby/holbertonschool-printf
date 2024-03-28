@@ -16,6 +16,7 @@ int get_sp_func(const char *format, va_list list)
 		{'s', print_string},
 		{'%', print_percentage},
 		{'d', print_decimal},
+		{'i', print_decimal},
 		{'\0', NULL}};
 
 	while (format != NULL && format[j] != '\0')

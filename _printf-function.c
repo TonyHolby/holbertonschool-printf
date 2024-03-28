@@ -13,6 +13,16 @@ int print_string(va_list list)
 	str = va_arg(list, char *);
 	len = _strlen(str);
 
+	if (str == NULL)
+	{
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+
+		return(len);
+	}
+
 	for (i = 0; i < len; i++)
 	{
 		_putchar (str[i]);

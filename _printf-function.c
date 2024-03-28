@@ -61,6 +61,22 @@ int print_percentage(va_list list __attribute__((unused)))
 }
 
 /**
+ * _recur_int - prints integer
+ * @a: integer to print
+ *
+ * Return: ..
+ */
+void _recur_int(int a)
+{
+        unsigned int b;
+
+        b = a;
+        if (b / 10)
+                _recur_int(b / 10);
+        _putchar(b % 10 + '0');
+}
+
+/**
  * print_decimal - a function that prints a decimal
  * @list: a list
  * Return: the number of characters printed
@@ -87,20 +103,4 @@ int print_decimal(va_list list)
 
 	_recur_int(nCopy);
 	return (len);
-}
-
-/**
- * _recur_int - prints integer
- * @a: integer to print
- *
- * Return: ..
- */
-void _recur_int(int a)
-{
-	unsigned int b;
-
-	b = a;
-	if (b / 10)
-		_recur_int(b / 10);
-	_putchar(b % 10 + '0');
 }

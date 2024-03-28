@@ -83,15 +83,22 @@ int print_decimal(va_list list)
 	for (; n > 9; n /= 10)
 	{
 		len++;
-		_putchar(n);
 	}
-	_putchar(len);
-
-	for (; n > 9; n /= 10)
-	{
-		len++;
-	}
-	_putchar(len);
-
 	return (len);
+}
+
+/**
+ * _recur_int - prints integer
+ * @a: integer to print
+ *
+ * Return: ..
+ */
+vois _recur_int(int a)
+{
+	unsigned int b;
+
+	b = a;
+	if (b / 10)
+		_recur_int(b / 10);
+	_putchar(b % 10 + '0');
 }

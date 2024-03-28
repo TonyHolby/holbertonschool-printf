@@ -84,6 +84,8 @@ int print_decimal(va_list list)
 	{
 		len++;
 	}
+
+	_recur_int(nCopy);
 	return (len);
 }
 

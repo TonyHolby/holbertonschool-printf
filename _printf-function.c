@@ -15,10 +15,12 @@ int print_string(va_list list)
 
 	if (str == NULL)
 	{
+		_putchar('(');
 		_putchar('n');
 		_putchar('u');
 		_putchar('l');
 		_putchar('l');
+		_putchar(')');
 
 		return(len);
 	}

@@ -93,7 +93,7 @@ int print_decimal(va_list list)
  *
  * Return: ..
  */
-vois _recur_int(int a)
+void _recur_int(int a)
 {
 	unsigned int b;
 

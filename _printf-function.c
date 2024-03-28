@@ -83,6 +83,7 @@ int print_decimal(va_list list)
 	{
 		len++;
 	}
+	_putchar(len);
 
 	for (; n > 9; n /= 10)
 	{

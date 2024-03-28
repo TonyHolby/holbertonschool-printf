@@ -5,7 +5,7 @@ _printf
 
 .SH SYNOPSIS
 
-#include <stdio.h>
+#include "main.h"
 int _printf(const char *restrict format, ...);
 
 .SH DESCRIPTION

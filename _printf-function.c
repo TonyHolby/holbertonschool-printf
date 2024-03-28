@@ -78,8 +78,9 @@ int print_decimal(va_list list)
 	}
 	for (; n > 9; n /= 10)
 	{
+		_putchar(n % 10 + '0');
 		count++;
 	}
-
+	_putchar(n + '0');
 	return (count);
 }

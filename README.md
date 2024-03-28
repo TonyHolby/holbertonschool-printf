@@ -61,7 +61,8 @@ Valgrind is a tool suite that provides a number of debugging and profiling tools
 
 # Flowchart
 
-![flowchart](https://github.com/TonyHolby/holbertonschool-printf/assets/158024260/bdf9e87b-d0e6-4c1b-973d-82d375a6e4a2)
+![Flowchart - _printf function drawio](https://github.com/TonyHolby/holbertonschool-printf/assets/159525275/d11850e9-bc45-4dc8-88bd-8104c87430dc)
+
 
 # Authors
 

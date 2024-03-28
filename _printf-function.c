@@ -74,7 +74,7 @@ int print_decimal(va_list list)
 		_putchar('-');
 		m = m * -1;
 		n = m;
-		count += 1;
+		count ++;
 	}
 	for (; n > 9; n /= 10)
 	{

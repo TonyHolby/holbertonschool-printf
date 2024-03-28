@@ -1,17 +1,18 @@
-NAME.
+TH PRINTF "27 Mars 2024" "1.0" "printf man page"
 
+.SH NAME
 _printf
 
-SYNOPSIS.
+.SH SYNOPSIS
 
 #include <stdio.h>
 int printf(const char *restrict format, ...);
 
-DESCRIPTION.
+.SH DESCRIPTION
 
 The printf function is a formatted output function used to display text on the console or other output devices.
 
-OPTION.
+.SH OPTION
 
 %c : Displays a character supplied as an argument.
 
@@ -21,7 +22,7 @@ OPTION.
 
 %i : Displays decimal, octal and hexadecimal integer.
 
-EXEMPLE.
+.SH EXEMPLE
 
 char letter = 'A';
 _printf("%c"\n, letter);
@@ -47,6 +48,6 @@ _printf("%d\n", n3);
 
 n, n2, n3, is a argument of %d,%d will convert all its integers and therefore display 42.
 
-RETURN VALUE.
+.SH RETURN VALUE
 
 the return value of printf is the number of characters displayed except the null character.

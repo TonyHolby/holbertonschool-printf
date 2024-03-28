@@ -100,6 +100,7 @@ Valgrind step :
 Valgrind is a tool suite that provides a number of debugging and profiling tools that help to confirm if the allocation of memory creates memory leaks.
 
 > Flowchart
-![alt text](https://files.slack.com/files-tmb/T0423U1MW21-F06RRLW22E7-c595a31781/image_720.png)
+
+![flowchart](https://github.com/TonyHolby/holbertonschool-printf/assets/158024260/bdf9e87b-d0e6-4c1b-973d-82d375a6e4a2)
 
 

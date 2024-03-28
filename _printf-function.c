@@ -67,7 +67,7 @@ int print_percentage(va_list list __attribute__((unused)))
 int print_decimal(va_list list)
 {
 	int len = 1, nCopy = 0;
-	unsigned int n;
+	long int n;
 
 	n = va_arg(list, int);
 	nCopy = n;
@@ -79,10 +79,10 @@ int print_decimal(va_list list)
 		len++;
 	}
 
-	for (; nCopy > 9; nCopy /= 10)
-        {
-                len++;
-        }
+	for (; n > 9; n /= 10)
+	{
+		len++;
+	}
 
-        return (len);
+	return (len);
 }

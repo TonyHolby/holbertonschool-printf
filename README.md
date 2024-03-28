@@ -2,24 +2,24 @@
 
 
 
-> # Description of the project
+# Description of the project
 
 This project is an implementation of the printf function.
 
 
-> # Command of compilation
+# Command of compilation
 
 The command to compil the program :
 
 gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
 
 
-> # Requirements
+# Requirements
 
 To compil this program it is necessary to use Ubuntu 20.04, the GCC compiler and git.
 
 
-> # Examples of use of the printf function
+# Examples of use of the printf function
 
 Here is some examples of the use of the printf function :
 
@@ -47,7 +47,7 @@ int main(void)
 }
 ```
 
-> # Testing
+# Testing
 
 Explanation of the code :
 Step 0:
@@ -59,10 +59,12 @@ Once the call to the corresponding function is trigerred, the argument is passed
 Valgrind step :
 Valgrind is a tool suite that provides a number of debugging and profiling tools that help to confirm if the allocation of memory creates memory leaks.
 
-> # Flowchart
+# Flowchart
 
 ![flowchart](https://github.com/TonyHolby/holbertonschool-printf/assets/158024260/bdf9e87b-d0e6-4c1b-973d-82d375a6e4a2)
 
-> # Authors
+# Authors
 
-
+Jean-alexandre ROGER
+Ilhan BEN BOUZIANE
+Tony NEMOUTHE

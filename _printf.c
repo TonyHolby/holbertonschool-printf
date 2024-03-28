@@ -16,11 +16,12 @@ int _printf(const char *format, ...)
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_percentage},
+		{'d', print_decimal},
 		{'\0', NULL}};
 
 	va_start(list, format);
 	j = 0;
-	if (format == NULL || format[j + 1] == '\0')
+	if (format == NULL || (format [0] == '%' && format[1] == '\0'))
 	{
 		return (-1);
 	}

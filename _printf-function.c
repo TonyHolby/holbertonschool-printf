@@ -79,8 +79,9 @@ int print_decimal(va_list list)
 		len++;
 	}
 
-	for (; n > 9; n /= 10)
+	while (n > 9)
 	{
+		n = n / 10;
 		len++;
 	}
 

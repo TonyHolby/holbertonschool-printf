@@ -8,10 +8,9 @@
  * Return: the number of characters printed.
  */
 
-int _printf(const char *format, ...)
+int get_sp_func(const char *format, va_list list)
 {
-	va_list list;
-	int i, j, len = 0;
+	int i, j = 0, len = 0;
 	spe_t sps[] = {
 		{'c', print_char},
 		{'s', print_string},
@@ -19,12 +18,6 @@ int _printf(const char *format, ...)
 		{'d', print_decimal},
 		{'\0', NULL}};
 
-	va_start(list, format);
-	j = 0;
-	if (format == NULL || format[j + 1] == '\0')
-	{
-		return (-1);
-	}
 	while (format != NULL && format[j] != '\0')
 	{
 		if (format[j] == '%' && (format[j + 1] != 'K' && format[j + 1] != '!'))
@@ -47,6 +40,24 @@ int _printf(const char *format, ...)
 		}
 		j++;
 	}
+	return (len);
+}
+
+/**
+ *
+ *
+ */
+int _printf(const char *format, ...)
+{
+	va_list list;
+	int len = 0;
+
+	va_start(list, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{
+		return (-1);
+	}
+	len = get_sp_func(format, list);
 	va_end(list);
 	return (len);
 }

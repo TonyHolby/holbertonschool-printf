@@ -76,18 +76,11 @@ int print_decimal(va_list list)
 		n = m;
 		count ++;
 	}
-	if (n == 0)
-	{
-		_putchar('0');
-		return (1);
-	}
 
-	while (n != 0)
-	{
-		_putchar(n % 10 + '0');
-		n /= 10;
-		count++;
-	}
+	for (; n > 9; n /= 10)
+        {
+                count++;
+        }
 
-	return (count);
+        return (count);
 }

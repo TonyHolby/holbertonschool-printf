@@ -22,7 +22,7 @@ int print_string(va_list list)
 		_putchar('l');
 		_putchar(')');
 
-		return(len);
+		return (len);
 	}
 
 	for (i = 0; i < len; i++)
@@ -79,9 +79,13 @@ int print_decimal(va_list list)
 		len++;
 	}
 
-	while (n > 9)
+	for (; n > 9; n /= 10)
 	{
-		n = n / 10;
+		len++;
+	}
+
+	for (; n > 9; n /= 10)
+	{
 		len++;
 	}
 

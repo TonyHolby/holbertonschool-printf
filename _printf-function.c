@@ -72,12 +72,14 @@ int print_percentage(va_list list __attribute__((unused)))
  */
 void _recur_int(int a)
 {
-        unsigned int b;
+	unsigned int b;
 
-        b = a;
-        if (b / 10)
-                _recur_int(b / 10);
-        _putchar(b % 10 + '0');
+	b = a;
+	if (b / 10)
+	{
+		_recur_int(b / 10);
+	}
+	_putchar(b % 10 + '0');
 }
 
 /**

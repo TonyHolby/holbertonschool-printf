@@ -9,9 +9,9 @@
  * Return: len
  */
 
-int get_sp_func(const char *format, va_list list)
+int (*get_sp_func(const char *format, va_list list))
 {
-	int i, j = 0, len = 0;
+	int i, j = 0, *len = 0;
 	spe_t sps[] = {
 		{'c', print_char},
 		{'s', print_string},

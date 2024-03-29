@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _printf - print all
+ * get_sp_func - selects the corresponding function
  *
- * @format: is a character string.
+ * @format: specifier string
+ * @list: list
  *
  * Return: the number of characters printed.
  */
@@ -43,10 +44,12 @@ int get_sp_func(const char *format, va_list list)
 	}
 	return (len);
 }
-
 /**
+ * _printf - print all
  *
+ * @format: is a character string.
  *
+ * Return: the number of characters printed.
  */
 int _printf(const char *format, ...)
 {

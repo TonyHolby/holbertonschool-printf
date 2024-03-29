@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
-	len = get_sp_func(format, list);
+	len = (*get_sp_func(format, list));
 	va_end(list);
 	return (len);
 }

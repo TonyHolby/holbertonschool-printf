@@ -33,6 +33,8 @@ int main(void)
 	_printf("%s", sentence);
 	return (0);
 }
+
+stdout: Hello world !
 ```
 
 To print a character :
@@ -45,6 +47,8 @@ int main(void)
         _printf("%c", c);
         return (0);
 }
+
+stdout: z
 ```
 
 # Testing

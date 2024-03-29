@@ -33,7 +33,9 @@ int main(void)
 	_printf("%s", sentence);
 	return (0);
 }
+```
 
+```
 stdout: Hello world !
 ```
 
@@ -47,7 +49,9 @@ int main(void)
         _printf("%c", c);
         return (0);
 }
+```
 
+```
 stdout: z
 ```
 

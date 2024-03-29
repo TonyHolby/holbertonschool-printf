@@ -20,8 +20,7 @@ int print_string(va_list list)
 		_putchar('l');
 		_putchar('l');
 		_putchar(')');
-		_putchar('\0');
-		len = 7;
+		len = 6;
 
 		return (len);
 	}

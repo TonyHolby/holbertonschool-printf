@@ -8,10 +8,9 @@
 int print_string(va_list list)
 {
 	char *str;
-	int len, i;
+	int len = 0, i;
 
 	str = va_arg(list, char *);
-	len = _strlen(str);
 
 	if (str == NULL)
 	{
@@ -21,14 +20,19 @@ int print_string(va_list list)
 		_putchar('l');
 		_putchar('l');
 		_putchar(')');
-		len = 6;
+		_putchar('\0');
+		len = 7;
 
 		return (len);
 	}
+	else
+	{
 
-	for (i = 0; i < len; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar (str[i]);
+		len++;
+	}
 	}
 
 	return (len);
